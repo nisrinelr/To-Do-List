@@ -3,9 +3,11 @@ This is a todo list app in Flask
 ## Requirements
 python >= 3.10
 ## Getting started
+
 Create a virtual environement and install dependecies:
 ```bash
-1 - Create a virtual environement
+1 - Clone the github repo and Create a virtual environement
+git clone https://github.com/NisrineDev/To-Do-List.git
 Python -m venv env
 2 - Activate the virtual environement
 On Windows : env/Scripts/activate
