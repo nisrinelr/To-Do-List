@@ -56,7 +56,7 @@
             </thead>
             <tbody>
                 {% for task in tasks %}
-                    <tr>
+                    <tr class="background-color: {% if task['status'] %} lightgreen {% else %} tomato {% endif %}">
                         <td>{{ task['id'] }}</td>
                         <td>{{ task['task_name'] }}</td>
                         <td class=" badge w-100 badge-primary text-wrap " id="status-{{task['id']}}" name="status" value="{{ task['id'] }}" >

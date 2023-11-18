@@ -1,4 +1,4 @@
-// function to make tasks as completed
+/* function to make tasks as completed
 var markCompletedLinks = document.querySelectorAll('.mark-completed-link');
 
 markCompletedLinks.forEach(function(link) {
@@ -13,7 +13,7 @@ function markCompleted(taskId) {
     statusTask.textContent = 'COMPLETED';
     statusTask.style.backgroundColor = 'green';
 }
-
+*/
 function openModal() {
     $('#myModal').modal('show');
 }

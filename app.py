@@ -37,9 +37,15 @@ def deleteTask(task_id):
 #endpoint for marking tasks as completed
 @app.route('/complete/<int:task_id>')
 def mark_completed(task_id):
-    task = next((task for task in tasks if task['id'] == task_id), None)
-    if task:
-        task['status'] = 'COMPLETED'
+    global status
+    global tasks
+    for task in tasks:
+        if task['id'] == task_id:
+            task['status'] = not task['status']
+            print(f"Task ID: {task_id}, Updated Task Status: {task['status']}")
+        else:
+            print(f"No task found with ID: {task_id}")
+            break
     return redirect(url_for('index'))
 
 if __name__ == '__main__':
